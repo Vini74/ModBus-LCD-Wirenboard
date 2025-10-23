@@ -1,0 +1,89 @@
+{
+    "device_type": "Modbus LCD",
+    "group": "g-custom",
+    "title": "Modbus LCD Display",
+    "device": {
+        "name": "Modbus LCD",
+        "id": "modbus_lcd",
+        "protocol": "modbus",
+        "channels": [
+            {
+                "name": "CHAR_01",
+                "reg_type": "holding",
+                "address": 0,
+                "type": "value",
+                "format": "u16",
+                "readonly": false,
+                "description": "CHAR_01"
+            },
+            {
+                "name": "String_1",
+                "reg_type": "holding",
+                "address": 0,
+                "type": "text",
+                "format": "string8",
+                "string_data_size":10,
+                "readonly": false,
+                "description": "String_1"
+            },
+            {
+                "name": "String_2",
+                "reg_type": "holding",
+                "address": 10,
+                "type": "text",
+                "format": "string8",
+                "string_data_size":10,
+                "readonly": false,
+                "description": "String_2"
+            },
+            {
+                "name": "String_3",
+                "reg_type": "holding",
+                "address": 20,
+                "type": "text",
+                "format": "string8",
+                "string_data_size":10,
+                "readonly": false,
+                "description": "String_3"
+            },
+            {
+                "name": "String_4",
+                "reg_type": "holding",
+                "address": 30,
+                "type": "text",
+                "format": "string8",
+                "string_data_size":10,
+                "readonly": false,
+                "description": "String_4"
+            },
+            {
+                "name": "Clear Screen",
+                "reg_type": "holding",
+                "address": 110,
+                "type": "switch",
+                "readonly": false,
+                "on_value": 1,
+                "off_value": 0,
+                "description": "Write 1 to clear the screen"
+            },
+            {
+                "name": "Clear Screen Status",
+                "reg_type": "holding",
+                "address": 111,
+                "type": "value",
+                "readonly": true,
+                "description": "Screen clear status (1 = completed)"
+            },
+            {
+                "name": "Display Enable",
+                "reg_type": "holding",
+                "address": 112,
+                "type": "switch",
+                "readonly": false,
+                "description": "Enable/disable display (1 = enable, 0 = disable)"
+            }
+
+
+        ]
+    }
+}
